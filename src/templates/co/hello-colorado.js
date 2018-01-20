@@ -1,9 +1,15 @@
 import React from 'react';
 
+import Email from '../../components/email';
+
 const HelloColorado = () => (
-  <div>
-    <h1>Hello, Colorado</h1>
-  </div>
+  <Email>
+    <h2>Hello, Colorado</h2>
+    <p>
+      You can find my template in{' '}
+      <code>src/templates/co/hello-colorado.js</code>
+    </p>
+  </Email>
 );
 
 export default HelloColorado;
