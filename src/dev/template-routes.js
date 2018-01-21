@@ -1,6 +1,11 @@
 import path from 'path';
 
-const ctx = require.context('../templates', true, /\.js$/);
+// Require all .js files in src/templates that do not end in .test.js or .spec.js
+const ctx = require.context(
+  '../templates',
+  true,
+  /^(?!.*(test|spec)\.js$).*\.js$/
+);
 
 const keys = ctx.keys();
 const values = keys.map(ctx);
