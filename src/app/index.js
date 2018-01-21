@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 import routes from './template-routes';
+import '../styles/main.scss';
 
 const App = () => (
   <div>

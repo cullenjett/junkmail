@@ -5,11 +5,13 @@ const util = require('util');
 const readdir = util.promisify(fs.readdir);
 const stat = util.promisify(fs.stat);
 
-async function getFiles(source) {
+async function allTemplates(source) {
   const files = [];
 
   await traverse(source, filePath => {
-    files.push(filePath);
+    if (isNotTestFile(filePath)) {
+      files.push(filePath);
+    }
   });
 
   return files;
@@ -33,7 +35,11 @@ async function traverse(currentDirPath, cb) {
   );
 }
 
+function isNotTestFile(filePath) {
+  return /^(?!.*(test|spec)\.js$).*\.js$/.test(filePath);
+}
+
 module.exports = {
-  getFiles,
+  allTemplates,
   traverse
 };
