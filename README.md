@@ -26,7 +26,7 @@ Styles can be found in `src/styles` and will be inlined on deploy. Only Sass fil
 
 * `npm test`
 
-Starts [Jest](https://facebook.github.io) in watch mode. Tests should be written inside a `__tests__` directory next to the module being tested and **must end in either `.test.js` or `.spec.js`**.
+Starts [Jest](https://facebook.github.io) in watch mode. **Test files must end in either `.test.js` or `.spec.js`**.
 
 ## Deploy
 

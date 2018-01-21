@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "format": "prettier --write \"**/*.js\"",
+    "format": "prettier --write \"src/**/*.js\"",
     "start": "webpack-dev-server --open",
     "test": "node scripts/test.js",
     "build": "rm -rf build && webpack",

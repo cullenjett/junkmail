@@ -1,4 +1,5 @@
 require('babel-core/register');
+
 const path = require('path');
 
 const { toString } = require('../src/utils/parse-template');

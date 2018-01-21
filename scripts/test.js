@@ -1,9 +1,4 @@
 process.env.NODE_ENV = 'test';
-process.env.REACT_APP_BLINKER_API_URL = 'https://test-api.blinker.com';
-
-process.on('unhandledRejection', err => {
-  throw err;
-});
 
 const jest = require('jest');
 const argv = process.argv.slice(2);
