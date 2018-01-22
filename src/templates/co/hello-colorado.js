@@ -3,7 +3,7 @@ import React from 'react';
 import Email from '../../components/email';
 
 const HelloColorado = () => (
-  <Email>
+  <Email title="Hello, Colorado">
     <h2>Hello, Colorado</h2>
     <p>
       You can find my template in{' '}

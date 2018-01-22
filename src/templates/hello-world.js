@@ -3,7 +3,7 @@ import React from 'react';
 import Email from '../components/email';
 
 const HelloWorld = () => (
-  <Email>
+  <Email title="Hello, world!">
     <h2>Hello, world!</h2>
     <p>
       Lorem ipsum dolor amet polaroid cloud bread ramps kickstarter kale chips
