@@ -7,19 +7,19 @@ const { allTemplates } = require('../src/utils/find-templates');
 
 deploy();
 
-function deploy() {
+async function deploy() {
   const templatesDirectory = path.join(__dirname, '../src/templates');
+  const templates = await allTemplates(templatesDirectory);
 
-  allTemplates(templatesDirectory).then(templates => {
-    printDeploying(templates);
-    templates.forEach(templatePath => {
-      toString(templatePath).then(string => {
-        printTemplate(templatePath, string);
-      });
-    });
+  printDeploying(templates);
+
+  templates.forEach(async templatePath => {
+    const templateString = await toString(templatePath);
+    printTemplate(templatePath, templateString);
   });
 }
 
+/* eslint-disable no-console */
 function printDeploying(templates) {
   console.log(
     'Templates being deployed:\n*',

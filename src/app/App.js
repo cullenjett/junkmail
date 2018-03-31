@@ -10,15 +10,15 @@ const App = () => (
       <Link to="/">JunkMail</Link>
     </h1>
 
-    <Route exact path="/" component={Hub} />
-
     <Switch>
+      <Route exact path="/" component={Hub} />
+
       {routes.map(route => (
         <Route
           exact
           path={route.path}
           component={route.Component}
-          key={route.path}
+          key={route.filename}
         />
       ))}
     </Switch>
