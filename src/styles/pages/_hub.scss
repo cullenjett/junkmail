@@ -1,0 +1,39 @@
+.hub {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__link {
+    position: relative;
+    margin: 20px;
+    border: 2px solid $pale-grey;
+    border-radius: 3px;
+    text-decoration: none;
+    color: $dark;
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: transparent;
+      transition: background 0.2s ease-in-out;
+      z-index: 2;
+    }
+
+    &:hover::after {
+      background: $pop-blue-transparent;
+    }
+  }
+
+  &__thumbnail {
+  }
+
+  &__link-text {
+    text-align: center;
+    background: $pale-grey;
+    margin: 0;
+    padding: 20px;
+  }
+}

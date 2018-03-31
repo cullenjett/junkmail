@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Email from '../components/email';
+import Email from '../components/Email';
 
 const HelloWorld = () => (
   <Email title="Hello, world!">

@@ -100,7 +100,7 @@ function buildIndexHtml({ markup, helmet }) {
         ${markup}
       </body>
     </html>
-    `.trim();
+  `.trim();
 }
 
 function stripDataAttrs(string) {

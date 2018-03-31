@@ -16,10 +16,14 @@ const allFiles = keys.reduce((obj, key, index) => {
 }, {});
 
 const routes = Object.keys(allFiles).reduce((arr, filename) => {
+  const strippedFilename = path.basename(filename, '.js');
+
   arr.push({
-    path: '/' + path.basename(filename, '.js'),
+    filename: strippedFilename,
+    path: `/${strippedFilename}`,
     Component: allFiles[filename].default
   });
+
   return arr;
 }, []);
 
